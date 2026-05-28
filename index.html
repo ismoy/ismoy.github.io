@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ismoy Belizaire · Open Source Developer</title>
+  <meta name="description" content="Ismoy Belizaire — Kotlin Multiplatform developer building cross-platform libraries that just work. KMP, Android, Compose, AI tools." />
+  <meta name="keywords" content="Ismoy Belizaire, Kotlin Multiplatform, KMP libraries, Android engineer, cross-platform mobile, Compose Multiplatform, AI developer tools, open source Kotlin, Maven Central, Chile developer" />
+  <meta name="author" content="Ismoy Belizaire" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ismoy Belizaire · Open Source Developer" />
+  <meta property="og:description" content="Building cross-platform libraries that just work." />
+  <meta property="og:url" content="https://ismoy.github.io" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --bg:        #0d1117;
+      --surface:   #161b22;
+      --border:    #30363d;
+      --text:      #e6edf3;
+      --muted:     #8b949e;
+      --accent:    #a68b6f;
+      --accent2:   #eac55f;
+      --purple:    #7F52FF;
+      --green:     #3DDC84;
+      --blue:      #4285F4;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 2.5rem 0 2rem;
+    }
+
+    .ascii {
+      font-family: "Courier New", Courier, monospace;
+      font-size: clamp(0.38rem, 1.4vw, 0.72rem);
+      color: var(--accent);
+      line-height: 1.2;
+      white-space: pre;
+      display: inline-block;
+    }
+
+    .hero h3 {
+      margin-top: 1rem;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .hero p em {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .badges {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .badges img { height: 20px; }
+
+    /* ── SECTION ── */
+    section {
+      margin-top: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-family: "Courier New", Courier, monospace;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── WHOAMI ── */
+    .code-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.4rem;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 0.85rem;
+      overflow-x: auto;
+      color: var(--text);
+    }
+
+    .code-block .kw  { color: var(--purple); }
+    .code-block .str { color: var(--green); }
+    .code-block .fn  { color: var(--blue); }
+
+    .quote {
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* ── LIBRARIES TABLE ── */
+    .lib-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .lib-grid { grid-template-columns: 1fr; }
+    }
+
+    .lib-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+    }
+
+    .lib-card strong {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .lib-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 0.3rem 0 0.6rem;
+    }
+
+    .lib-card .lib-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .lib-card .lib-badges img { height: 18px; }
+
+    /* ── COOKING TABLE ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    th {
+      text-align: left;
+      color: var(--muted);
+      font-weight: 600;
+      padding: 0.4rem 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 0.5rem 0.6rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    td img { height: 18px; vertical-align: middle; }
+
+    /* ── TECH STACK ── */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 500px) {
+      .stack-grid { grid-template-columns: 1fr; }
+    }
+
+    .stack-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+    }
+
+    .stack-card strong {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .stack-card .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .stack-card .tag-row img { height: 20px; }
+
+    /* ── STATS ── */
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .stats-grid img {
+      border-radius: 6px;
+      max-width: 100%;
+    }
+
+    /* ── WRITING ── */
+    .writing-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .writing-list li::before {
+      content: "→ ";
+      color: var(--accent);
+    }
+
+    .writing-list a {
+      font-size: 0.9rem;
+    }
+
+    /* ── SPONSOR ── */
+    .sponsor-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.4rem;
+      text-align: center;
+    }
+
+    .sponsor-box p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 0.8rem;
+    }
+
+    /* ── CONNECT ── */
+    .connect-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .connect-badges img { height: 22px; }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.78rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <div class="ascii">
+██╗███████╗███╗   ███╗ ██████╗ ██╗   ██╗
+██║██╔════╝████╗ ████║██╔═══██╗╚██╗ ██╔╝
+██║███████╗██╔████╔██║██║   ██║ ╚████╔╝
+██║╚════██║██║╚██╔╝██║██║   ██║  ╚██╔╝
+██║███████║██║ ╚═╝ ██║╚██████╔╝   ██║
+╚═╝╚══════╝╚═╝     ╚═╝ ╚═════╝    ╚═╝
+    </div>
+
+    <h3>Ismoy Belizaire &nbsp;·&nbsp; Open Source Developer</h3>
+    <p><em>Building cross-platform libraries that just work.</em></p>
+
+    <div class="badges">
+      <a href="https://github.com/ismoy">
+        <img src="https://img.shields.io/github/followers/ismoy?style=flat-square&color=a68b6f&labelColor=0d1117&label=followers" alt="followers" />
+      </a>
+      <a href="https://github.com/ismoy">
+        <img src="https://komarev.com/ghpvc/?username=ismoy&style=flat-square&color=a68b6f&labelColor=0d1117&label=profile+views" alt="profile views" />
+      </a>
+      <a href="https://github.com/sponsors/ismoy">
+        <img src="https://img.shields.io/badge/Sponsor-a68b6f?style=flat-square&logo=githubsponsors&logoColor=white&labelColor=0d1117" alt="sponsor" />
+      </a>
+    </div>
+  </div>
+
+  <!-- ── WHOAMI ── -->
+  <section>
+    <h2>$ whoami</h2>
+    <div class="code-block">
+<span class="kw">val</span> ismoy = <span class="fn">Developer</span>(<br>
+&nbsp;&nbsp;name    = <span class="str">"Ismoy Belizaire"</span>,<br>
+&nbsp;&nbsp;focus   = <span class="fn">listOf</span>(<span class="str">"Kotlin Multiplatform"</span>, <span class="str">"AI Tools"</span>, <span class="str">"Developer Libraries"</span>),<br>
+&nbsp;&nbsp;mission = <span class="str">"Eliminate friction in cross-platform development"</span>,<br>
+&nbsp;&nbsp;based   = <span class="str">"Chile — available globally"</span>,<br>
+&nbsp;&nbsp;status  = <span class="str">"Building the next generation of KMP libraries"</span><br>
+)
+    </div>
+    <div class="quote">
+      I design and ship open-source tools that developers actually want to use —<br>
+      production-ready, well-documented, and built for the real world.
+    </div>
+  </section>
+
+  <!-- ── LIBRARIES ── -->
+  <section>
+    <h2>$ libraries --registry maven-central</h2>
+    <div class="lib-grid">
+
+      <div class="lib-card">
+        <strong>ImagePickerKMP</strong>
+        <p>Cross-platform image picker · Camera &amp; Gallery · Android &amp; iOS</p>
+        <div class="lib-badges">
+          <a href="https://github.com/ismoy/ImagePickerKMP">
+            <img src="https://img.shields.io/badge/open-a68b6f?style=flat-square&labelColor=161b22" alt="open" />
+          </a>
+          <a href="https://search.maven.org/artifact/io.github.ismoy/imagepickerkmp">
+            <img src="https://img.shields.io/maven-central/v/io.github.ismoy/imagepickerkmp?style=flat-square&labelColor=161b22&color=a68b6f" alt="maven" />
+          </a>
+          <a href="https://github.com/ismoy/ImagePickerKMP">
+            <img src="https://img.shields.io/github/stars/ismoy/ImagePickerKMP?style=flat-square&labelColor=161b22&color=eac55f" alt="stars" />
+          </a>
+        </div>
+      </div>
+
+      <div class="lib-card">
+        <strong>BelZSpeedScan</strong>
+        <p>QR &amp; Barcode scanner · Pure KMP · No wrappers, no compromises</p>
+        <div class="lib-badges">
+          <a href="https://github.com/ismoy/BelZSpeedScan">
+            <img src="https://img.shields.io/badge/open-a68b6f?style=flat-square&labelColor=161b22" alt="open" />
+          </a>
+          <a href="https://search.maven.org/artifact/io.github.ismoy/belzspeedscan">
+            <img src="https://img.shields.io/maven-central/v/io.github.ismoy/belzspeedscan?style=flat-square&labelColor=161b22&color=a68b6f" alt="maven" />
+          </a>
+          <a href="https://github.com/ismoy/BelZSpeedScan">
+            <img src="https://img.shields.io/github/stars/ismoy/BelZSpeedScan?style=flat-square&labelColor=161b22&color=eac55f" alt="stars" />
+          </a>
+        </div>
+      </div>
+
+      <div class="lib-card">
+        <strong>KMPSwipe</strong>
+        <p>Composable swipe gestures · One API · All platforms</p>
+        <div class="lib-badges">
+          <a href="https://github.com/ismoy/KMPSwipe">
+            <img src="https://img.shields.io/badge/open-a68b6f?style=flat-square&labelColor=161b22" alt="open" />
+          </a>
+          <a href="https://search.maven.org/artifact/io.github.ismoy/kmpswipe">
+            <img src="https://img.shields.io/maven-central/v/io.github.ismoy/kmpswipe?style=flat-square&labelColor=161b22&color=a68b6f" alt="maven" />
+          </a>
+          <a href="https://github.com/ismoy/KMPSwipe">
+            <img src="https://img.shields.io/github/stars/ismoy/KMPSwipe?style=flat-square&labelColor=161b22&color=eac55f" alt="stars" />
+          </a>
+        </div>
+      </div>
+
+      <div class="lib-card">
+        <strong>I18nKonfig</strong>
+        <p>i18n config library for KMP · Stop copy-pasting boilerplate</p>
+        <div class="lib-badges">
+          <img src="https://img.shields.io/badge/coming_soon-161b22?style=flat-square&labelColor=161b22&color=555" alt="coming soon" />
+          <img src="https://img.shields.io/badge/in_development-a68b6f?style=flat-square&labelColor=161b22" alt="in development" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── COOKING ── -->
+  <section>
+    <h2>$ git log --oneline --cooking</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Description</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SmartDocParse</td>
+          <td>AI-powered document parsing &amp; data extraction</td>
+          <td><img src="https://img.shields.io/badge/building-22863a?style=flat-square&labelColor=161b22" alt="building" /></td>
+        </tr>
+        <tr>
+          <td>PdfCraft</td>
+          <td>Developer-first PDF generation for KMP</td>
+          <td><img src="https://img.shields.io/badge/designing-0969da?style=flat-square&labelColor=161b22" alt="designing" /></td>
+        </tr>
+        <tr>
+          <td>CodePilot</td>
+          <td>AI coding assistant tooling for dev workflows</td>
+          <td><img src="https://img.shields.io/badge/research-8250df?style=flat-square&labelColor=161b22" alt="research" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ── TECH STACK ── -->
+  <section>
+    <h2>$ tech --stack</h2>
+    <div class="stack-grid">
+      <div class="stack-card">
+        <strong>Primary</strong>
+        <div class="tag-row">
+          <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
+          <img src="https://img.shields.io/badge/KMP-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="KMP" />
+          <img src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Compose" />
+          <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android" />
+        </div>
+      </div>
+      <div class="stack-card">
+        <strong>Also work with</strong>
+        <div class="tag-row">
+          <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
+          <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+          <img src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React Native" />
+          <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter" />
+          <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" alt="Firebase" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS ── -->
+  <section>
+    <h2>$ github --stats</h2>
+    <div class="stats-grid">
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ismoy&theme=github_dark" width="45%" alt="Repos per language" />
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ismoy&theme=github_dark" width="45%" alt="Most committed languages" />
+    </div>
+    <div class="stats-grid" style="margin-top:1rem;">
+      <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ismoy&theme=github_dark" width="90%" alt="Profile summary" />
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- ── WRITING ── -->
+  <section>
+    <h2>$ cat latest-writing.md</h2>
+    <ul class="writing-list">
+      <li>
+        <a href="https://medium.com/@belizairesmoy72/imagepickerkmp-a-cross-platform-image-picker-for-kotlin-multiplatform-android-native-94174da40b47" target="_blank" rel="noopener">
+          ImagePickerKMP: Cross-Platform Image Capture for Kotlin Multiplatform
+        </a>
+      </li>
+      <li>
+        <a href="https://medium.com/@belizairesmoy72/belzspeedscan-a-cross-platform-qr-barcode-scanner-for-kotlin-multiplatform-android-ios-fde8e4e97d06" target="_blank" rel="noopener">
+          BelZSpeedScan: QR and Barcode Scanner for Kotlin Multiplatform
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ── SPONSOR ── -->
+  <section>
+    <h2>$ support --open-source</h2>
+    <div class="sponsor-box">
+      <p style="margin-bottom:1rem; color: var(--text);">
+        If my libraries save you time, consider sponsoring — it lets me ship more tools, faster, free for everyone.
+      </p>
+      <a href="https://github.com/sponsors/ismoy">
+        <img src="https://img.shields.io/badge/Become_a_Sponsor-a68b6f?style=for-the-badge&logo=githubsponsors&logoColor=white&labelColor=0d1117" alt="Become a Sponsor" />
+      </a>
+      <p><code>$5/mo</code> keeps the libraries alive &nbsp;·&nbsp; <code>$15/mo</code> gets you priority support</p>
+    </div>
+  </section>
+
+  <!-- ── CONNECT ── -->
+  <section>
+    <h2>$ connect --open-to-collab</h2>
+    <p style="color: var(--muted); font-size: 0.88rem; margin-bottom: 1rem; text-align:center;">
+      Open to collaborations, OSS partnerships, and freelance work in <strong style="color:var(--text)">KMP, AI tools, and mobile</strong>.
+    </p>
+    <div class="connect-badges">
+      <a href="https://www.linkedin.com/in/ismoy-belizaire-a0ba99106" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
+      </a>
+      <a href="https://medium.com/@belizairesmoy72" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/badge/Medium-white?style=flat-square&logo=medium&logoColor=black" alt="Medium" />
+      </a>
+      <a href="mailto:belizairesmoy72@gmail.com">
+        <img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Gmail" />
+      </a>
+      <a href="https://github.com/ismoy/ismoy/discussions" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/badge/Discussions-a68b6f?style=flat-square&logo=github&logoColor=white" alt="Discussions" />
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    Built in Chile · Shipped for the world · Powered by coffee
+  </footer>
+
+</div>
+</body>
+</html>
